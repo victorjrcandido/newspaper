@@ -115,6 +115,10 @@
   ._head {
     display: none;
   }
-  
+  .nav_news {
+    display: none;
+  }
+  .nav_about {
+    display: none;
+  }
  }
-

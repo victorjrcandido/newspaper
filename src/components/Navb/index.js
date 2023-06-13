@@ -5,11 +5,11 @@ const Navb = ({ toggleTheme }) => {
     <Header>
       <Navbar>
         <Navbar.Brand href="https://github.com/victorjrcandido/" style={{ fontWeight: 'bold' }}>NEWSPAPER</Navbar.Brand>
-        <Nav>
+        <Nav className='nav_news'>
           <Nav.Item>News</Nav.Item>
           <Nav.Menu title="About">
             <Nav.Menu title="Contact">
-              <Nav.Item><a href="mailto:victorjrcandido@gmail.com">victorjrcandido@gmail.com</a></Nav.Item>
+              <Nav.Item ><a href="mailto:victorjrcandido@gmail.com">victorjrcandido@gmail.com</a></Nav.Item>
             </Nav.Menu>
           </Nav.Menu>
         </Nav>
