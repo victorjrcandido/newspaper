@@ -25,7 +25,7 @@ const FooterC = () => {
         </FlexboxGrid.Item>
         <FlexboxGrid.Item colspan={3}>
           <h5>Socials</h5>
-          <a target='_blank' href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+          <a target='_blank' href="https://www.linkedin.com/in/victorjrcandido/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
           <a target='_blank' href="https://github.com/victorjrcandido"><i class="fa-brands fa-github fa-lg"></i></a>
           <a target='_blank' href="https://www.instagram.com/victorjrcandido/"><i class="fa-brands fa-instagram fa-lg"></i></a>
         </FlexboxGrid.Item>
