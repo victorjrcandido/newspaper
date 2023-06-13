@@ -46,7 +46,7 @@ const Maincontent = () => {
             {articlesCarousel.map((article, index) => (
               <div key={index}>
                 <a href={article.short_url} target="_blank">
-                  <img key={index} src={article.multimedia[1].url} alt='2' height="400" width={600} />
+                  <img key={index} src={article.multimedia[1].url} alt={article.multimedia[1].caption} />
                 </a>
               </div>
             ))}

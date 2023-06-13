@@ -30,6 +30,10 @@
   font-size: 5rem;
 }
 
+.rs-carousel {
+  height: auto;
+}
+
  @media (max-width: 4000px) { 
   .grid {
     margin: 40px;
@@ -80,6 +84,10 @@
  }
 
  @media (max-width: 510px) {
+  .grid {
+    margin: 6px;
+    padding-top: 6px;
+  }
   .filtro h3 {
     font-size: 2.1rem;
   }
@@ -89,8 +97,12 @@
  }
 
  @media (max-width: 410px) {
+  .grid {
+    margin: 6px;
+    padding-top: 6px;
+  }
   .filtro h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   .panel {
     height: 100%;
