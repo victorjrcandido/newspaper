@@ -10,13 +10,17 @@
   cursor: pointer;
 }
 
+.card {
+  margin-bottom: 10px;
+}
+
  @media (max-width: 4000px) { 
   .grid {
     margin: 40px;
-    padding-top: 40px;
+    padding-top: 35px;
   }
   .panel {
-    height: 450px;
+    height: 470px;
   }
  }
 

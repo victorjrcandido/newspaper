@@ -31,16 +31,16 @@ const Maincontent = () => {
   return (
     <>
       <div className="filtro">
-        <h3 onClick={() => handleTermClick('politics')}>Politics</h3>
-        <h3 onClick={() => handleTermClick('world')}>World</h3>
-        <h3 onClick={() => handleTermClick('sports')}>Sports</h3>
-        <h3 onClick={() => handleTermClick('technology')}>Technology</h3>
-        <h3 onClick={() => handleTermClick('food')}>Food</h3>
+        <h3 className={terms === 'politics' ? 'underlined' : ''} onClick={() => handleTermClick('politics')}>Politics</h3>
+        <h3 className={terms === 'world' ? 'underlined' : ''} onClick={() => handleTermClick('world')}>World</h3>
+        <h3 className={terms === 'sports' ? 'underlined' : ''} onClick={() => handleTermClick('sports')}>Sports</h3>
+        <h3 className={terms === 'technology' ? 'underlined' : ''} onClick={() => handleTermClick('technology')}>Technology</h3>
+        <h3 className={terms === 'food' ? 'underlined' : ''} onClick={() => handleTermClick('food')}>Food</h3>
       </div>
       <Grid className='grid' fluid >
         <Row gutter={16}>
           {articles.map((article, index) => (
-            <Col xl={6} lg={8} md={8} sm={12} xs={24}>
+            <Col xl={6} lg={8} md={8} sm={12} xs={24} className='card'>
               <Panel className='panel' key={index} shaded bordered bodyFill style={{ display: 'inline-block', width: AutoComplete }}>
                 <img src={article.multimedia[1].url} width='100%' />
                 <h5 style={{ padding: 12, paddingBottom: 1 }} > {article.title}</h5>

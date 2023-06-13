@@ -4,3 +4,13 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+
+.toggle {
+    align-items: center;
+    display: flex;
+    padding: 18px 16px;
+}
+
+.underlined {
+  text-decoration: underline;
+}

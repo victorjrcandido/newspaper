@@ -1,14 +1,22 @@
 import 'rsuite/dist/rsuite.min.css';
-import { Container, CustomProvider } from 'rsuite';
+import { Toggle, Container, CustomProvider } from 'rsuite';
 import Navb from './components/Navb';
 import Maincontent from './components/Maincontent';
+import { useState } from 'react';
 
 
 const App = () => {
+
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
   return (
-    <CustomProvider theme='light'>
+    <CustomProvider theme={theme}>
       <Container>
-        <Navb />
+        <Navb toggleTheme={toggleTheme} />
         <Maincontent />
       </Container>
     </CustomProvider>
