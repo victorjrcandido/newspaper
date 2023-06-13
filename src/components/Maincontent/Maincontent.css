@@ -94,6 +94,11 @@
   .panel {
     height: 100%;
   }
+  ._head {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
  }
 
  @media (max-width: 410px) {
@@ -107,5 +112,9 @@
   .panel {
     height: 100%;
   }
+  ._head {
+    display: none;
+  }
+  
  }
 
