@@ -7,15 +7,15 @@ const FooterC = () => {
       <FlexboxGrid justify="space-around">
         <FlexboxGrid.Item colspan={3}>
           <h5>News</h5>
-          <p>Home Page</p>
+          <p>Home</p>
           <p>Politic</p>
           <p>Business</p>
         </FlexboxGrid.Item>
         <FlexboxGrid.Item colspan={3}>
           <h5>Subscribe</h5>
-          <p>Home Delivery</p>
-          <p>Subscription</p>
-          <p>Newsletters</p>
+          <p>Delivery</p>
+          <p>Premium</p>
+          <p>Newsletter</p>
         </FlexboxGrid.Item>
         <FlexboxGrid.Item colspan={3}>
           <h5>Company</h5>
