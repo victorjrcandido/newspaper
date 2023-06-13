@@ -14,6 +14,22 @@
   margin-bottom: 10px;
 }
 
+.card a {
+  color: var(--rs-navbar-default-text);
+}
+
+.lorem {
+  max-width: 500px;
+  font-size: 2.2rem;
+  padding: 1rem;
+}
+
+.lorem h2 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 5rem;
+}
+
  @media (max-width: 4000px) { 
   .grid {
     margin: 40px;
@@ -32,6 +48,25 @@
   .panel {
     height: 450px;
   }
+
+  .lorem p {
+    line-height: 1.2;
+  }
+ }
+
+ @media (max-width: 925px) { 
+  .grid {
+    margin: 10px;
+    padding-top: 10px;
+  }
+  .panel {
+    height: 420px;
+  }
+
+  .lorem {
+    display: none;
+  }
+
  }
 
  @media (max-width: 575px) { 
@@ -48,10 +83,17 @@
   .filtro h3 {
     font-size: 2.1rem;
   }
+  .panel {
+    height: 100%;
+  }
  }
 
  @media (max-width: 410px) {
   .filtro h3 {
     font-size: 1.75rem;
   }
+  .panel {
+    height: 100%;
+  }
  }
+

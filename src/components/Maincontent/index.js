@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from 'react'
-import { Grid, Row, Col, Panel, Content, AutoComplete } from 'rsuite';
+import { Grid, Row, Col, Panel, AutoComplete, Carousel } from 'rsuite';
 import './Maincontent.css';
 
 const Maincontent = () => {
+  const [articlesCarousel, setArticlesCarousel] = useState([]);
   const [articles, setArticles] = useState([]);
   const [terms, setTerms] = useState('technology');
   const [isLoading, setIsLoading] = useState(true);
+
+  const API_KEY = 'ecRbcfdTjD7OHh5DC1XmhColi7AtmhpK';
 
   useEffect(() => {
     const fetchArticles = async () => {
       try {
         const res = await fetch(
-          `https://api.nytimes.com/svc/topstories/v2/${terms}.json?api-key=ecRbcfdTjD7OHh5DC1XmhColi7AtmhpK`
+          `https://api.nytimes.com/svc/topstories/v2/${terms}.json?api-key=${API_KEY}`
         );
         const articles = await res.json();
-        console.log(articles.results);
-        setArticles(articles.results.slice(1, 9));
+        setArticles(articles.results.slice(11, 19));
+        setArticlesCarousel(articles.results.slice(2, 10));
+
       } catch (error) {
         console.log(error);
       }
@@ -30,8 +34,34 @@ const Maincontent = () => {
 
   return (
     <>
+      <div className='cr_background'>
+        <div className="carousel">
+          <Carousel
+            autoplay
+            key='bottom.dot'
+            placement='bottom'
+            shape='dot'
+            className="custom-slider"
+          >
+            {articlesCarousel.map((article, index) => (
+              <div key={index}>
+                <a href={article.short_url} target="_blank">
+                  <img key={index} src={article.multimedia[1].url} alt='2' height="400" width={600} />
+                </a>
+              </div>
+            ))}
+
+          </Carousel>
+        </div >
+        <div className='lorem'>
+          <h2>The best place to get your information</h2>
+          <p>We offer a unique and informative experience that will awaken your senses to the most relevant events. Keep it up with the world's most important events.</p>
+        </div>
+      </div >
+
+
       <div className="filtro">
-        <h3 className={terms === 'politics' ? 'underlined' : ''} onClick={() => handleTermClick('politics')}>Politics</h3>
+        <h3 className={terms === 'science' ? 'underlined' : ''} onClick={() => handleTermClick('science')}>Science</h3>
         <h3 className={terms === 'world' ? 'underlined' : ''} onClick={() => handleTermClick('world')}>World</h3>
         <h3 className={terms === 'sports' ? 'underlined' : ''} onClick={() => handleTermClick('sports')}>Sports</h3>
         <h3 className={terms === 'technology' ? 'underlined' : ''} onClick={() => handleTermClick('technology')}>Technology</h3>
@@ -40,14 +70,16 @@ const Maincontent = () => {
       <Grid className='grid' fluid >
         <Row gutter={16}>
           {articles.map((article, index) => (
-            <Col xl={6} lg={8} md={8} sm={12} xs={24} className='card'>
-              <Panel className='panel' key={index} shaded bordered bodyFill style={{ display: 'inline-block', width: AutoComplete }}>
-                <img src={article.multimedia[1].url} width='100%' />
-                <h5 style={{ padding: 12, paddingBottom: 1 }} > {article.title}</h5>
-                <p className='text-container' style={{ padding: 12 }}>
-                  <small >{`${article.abstract.slice(0, 190)}`}</small>
-                </p>
-                <small style={{ padding: 12 }}>{`${article.byline}`}</small>
+            <Col xl={6} lg={8} md={8} sm={12} xs={24} key={index} className='card'>
+              <Panel className='panel' shaded bordered bodyFill style={{ display: 'inline-block', width: AutoComplete }}>
+                <a href={article.short_url} target="_blank" rel="noopener noreferrer">
+                  <img src={article.multimedia[1].url} width='100%' />
+                  <h5 style={{ padding: 12, paddingBottom: 1 }} > {article.title}</h5>
+                  <p className='text-container' style={{ padding: 12 }}>
+                    <small >{`${article.abstract.slice(0, 190)}`}</small>
+                  </p>
+                  <small style={{ padding: 12 }}>{`${article.multimedia[1].copyright}`}</small>
+                </a>
               </Panel>
             </Col>
           ))}

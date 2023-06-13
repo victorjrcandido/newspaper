@@ -21,7 +21,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   margin-top: 2rem;
   padding: 2rem;
 }
@@ -46,10 +46,26 @@ html {
   padding-bottom: 1rem;
 }
 
+.footer p {
+  cursor: pointer;
+}
+
 .footer i {
   padding-right: 1rem;
 }
 
 .footer a {
   color: var(--rs-navbar-default-text);
+}
+
+.cr_background {
+  /* background-color: var(--rs-navbar-default-bg); */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 10px;
+}
+
+.carousel {
+  width: 600px;
 }

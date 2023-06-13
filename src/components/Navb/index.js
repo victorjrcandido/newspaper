@@ -9,7 +9,7 @@ const Navb = ({ toggleTheme }) => {
           <Nav.Item>News</Nav.Item>
           <Nav.Menu title="About">
             <Nav.Menu title="Contact">
-              <Nav.Item>victorjrcandido@gmail.com</Nav.Item>
+              <Nav.Item><a href="mailto:victorjrcandido@gmail.com">victorjrcandido@gmail.com</a></Nav.Item>
             </Nav.Menu>
           </Nav.Menu>
         </Nav>
@@ -19,7 +19,6 @@ const Navb = ({ toggleTheme }) => {
       </Navbar>
       <div className='_head'>
         <h2>WELCOME TO THE NEWSPAPER</h2>
-        <p>The best place to know what's happening around the world.</p>
       </div>
     </Header>
   )
