@@ -1,5 +1,6 @@
 .filtro {
-  margin-top: 20px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   /* gap: 20px; */
   display: flex;
   align-items: center;
@@ -32,6 +33,36 @@
 
 .rs-carousel {
   height: auto;
+}
+
+.article-container {
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: -1;
+}
+
+.article-container p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 2.5rem;
 }
 
  @media (max-width: 4000px) { 
@@ -103,6 +134,9 @@
     padding-bottom: 0.6rem;
     font-size: 1.5rem;
   }
+  .article-container p {
+    font-size: 2rem;
+  }
  }
 
  @media (max-width: 410px) {
@@ -132,35 +166,10 @@
   .footer p {
     font-size: 1.25rem;
   }
+  .article-container p {
+    font-size: 1.5rem;
+  }
  }
 
 
- .article-container {
-  position: relative;
-}
-
-.image-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  position: relative;
-  z-index: -1;
-}
-
-.article-container p {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
-  padding: 10px;
-  margin: 0;
-  text-align: center;
-  font-weight: bolder;
-  font-size: 2.5rem;
-}
+ 

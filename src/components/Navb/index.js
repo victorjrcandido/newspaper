@@ -17,9 +17,9 @@ const Navb = ({ toggleTheme }) => {
           <Toggle className='toggle' size='md' onClick={toggleTheme} checkedChildren="Dark" unCheckedChildren="Light"></Toggle>
         </Nav>
       </Navbar>
-      <div className='_head'>
+      {/* <div className='_head'>
         <h2>WELCOME TO THE NEWSPAPER</h2>
-      </div>
+      </div> */}
     </Header>
   )
 }
