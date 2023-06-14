@@ -72,15 +72,15 @@ const Maincontent = () => {
         <Row gutter={16}>
           {articles.map((article, index) => (
             <Col xl={6} lg={8} md={8} sm={12} xs={24} key={index} className='card'>
-              <Panel className='panel' shaded bordered bodyFill style={{ display: 'inline-block', width: AutoComplete }}>
+              <Panel className='panel' shaded bordered bodyFill style={{ display: 'inline-block', width: 'AutoComplete', position: 'relative' }}>
                 <a href={article.short_url} target="_blank" rel="noopener noreferrer">
                   <img src={article.multimedia[1].url} width='100%' />
-                  <h5 style={{ padding: 12, paddingBottom: 1 }} > {article.title}</h5>
+                  <h5 style={{ padding: 12, paddingBottom: 1 }}>{article.title}</h5>
                 </a>
                 <p className='text-container' style={{ padding: 12 }}>
-                  <small >{`${article.abstract.slice(0, 190)}`}</small>
+                  <small>{`${article.abstract.slice(0, 190)}`}</small>
                 </p>
-                <small style={{ padding: 12 }}>{`${article.multimedia[1].copyright}`}</small>
+                <small style={{ padding: 12, position: 'absolute', bottom: 0 }}>{`${article.multimedia[1].copyright}`}</small>
               </Panel>
             </Col>
           ))}
