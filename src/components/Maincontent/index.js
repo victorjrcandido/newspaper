@@ -63,7 +63,7 @@ const Maincontent = () => {
         </div >
         <div className='lorem'>
           <h2>The best place to get your information</h2>
-          <p>We offer a unique and informative experience that will awaken your senses to the most relevant events. Keep it up with the world's most important events.</p>
+          <p>We offer a unique and informative experience that will awaken your senses to the most relevant events. Keep it up with the world's most important news.</p>
         </div>
       </div >
 
