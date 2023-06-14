@@ -133,3 +133,34 @@
     font-size: 1.25rem;
   }
  }
+
+
+ .article-container {
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: -1;
+}
+
+.article-container p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 2.5rem;
+}

@@ -38,16 +38,17 @@ const Maincontent = () => {
         <div className="carousel">
           <Carousel
             autoplay
-            key='bottom.dot'
-            placement='bottom'
+            key='top.dot'
+            placement='top'
             shape='dot'
             className="custom-slider"
           >
             {articlesCarousel.map((article, index) => (
-              <div key={index}>
+              <div key={index} className='article-container'>
                 <a href={article.short_url} target="_blank">
                   <img key={index} src={article.multimedia[1].url} alt={article.multimedia[1].caption} />
                 </a>
+                <p>{article.title}</p>
               </div>
             ))}
 
