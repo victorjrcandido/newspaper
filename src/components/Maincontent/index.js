@@ -75,11 +75,11 @@ const Maincontent = () => {
                 <a href={article.short_url} target="_blank" rel="noopener noreferrer">
                   <img src={article.multimedia[1].url} width='100%' />
                   <h5 style={{ padding: 12, paddingBottom: 1 }} > {article.title}</h5>
-                  <p className='text-container' style={{ padding: 12 }}>
-                    <small >{`${article.abstract.slice(0, 190)}`}</small>
-                  </p>
-                  <small style={{ padding: 12 }}>{`${article.multimedia[1].copyright}`}</small>
                 </a>
+                <p className='text-container' style={{ padding: 12 }}>
+                  <small >{`${article.abstract.slice(0, 190)}`}</small>
+                </p>
+                <small style={{ padding: 12 }}>{`${article.multimedia[1].copyright}`}</small>
               </Panel>
             </Col>
           ))}
