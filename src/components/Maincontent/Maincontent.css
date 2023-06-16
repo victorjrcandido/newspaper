@@ -97,7 +97,9 @@
   .panel {
     height: 420px;
   }
-
+  .filtro {
+    margin: 3rem 0;
+  }
   .lorem {
     display: none;
   }
