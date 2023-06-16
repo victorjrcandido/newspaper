@@ -109,6 +109,9 @@
     margin: 10px;
     padding-top: 10px;
   }
+  .filtro {
+    margin: 2rem 0;
+  }
   .panel {
     height: 100%;
   }
@@ -121,6 +124,9 @@
   }
   .filtro h3 {
     font-size: 2.1rem;
+  }
+  .filtro {
+    margin: 1rem 0;
   }
   .panel {
     height: 100%;
@@ -146,6 +152,9 @@
   }
   .filtro h3 {
     font-size: 1.5rem;
+  }
+  .filtro {
+    margin: 0.5rem 0;
   }
   .panel {
     height: 100%;
